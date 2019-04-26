@@ -1,15 +1,16 @@
 import React from 'react';
 import './StarWars.scss';
 
+   
 function Character(props) {
+    
     //console.log(props);
     return (
-        
         <div className="character-info">
             <h3 className="name">{props.character.name}</h3>
             <p><strong>Birth Year:</strong> {props.character.birth_year}</p>
-            {/* <p><strong>Homeworld:</strong> {props.character.homeworld}</p>
-            <p><strong>Species:</strong> {props.character.species}</p> */}
+            {/* <p><strong>Homeworld:</strong> {props.character.homeworld}</p> */}
+            {/* <p><strong>Species:</strong> {props.character.species}</p> */}
             <p><strong>Gender:</strong> {props.character.gender}</p>
             <p><strong>Height:</strong> {props.character.height}</p>
             <p><strong>Mass:</strong> {props.character.mass}</p>
