@@ -1,8 +1,19 @@
+$font1: 'Permanent Marker', cursive;
+$font2: 'Roboto Slab', serif;
+
 .App {
   text-align: center;
 }
 .Header {
+  font-family: $font1;
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+
+.characterlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

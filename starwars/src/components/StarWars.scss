@@ -1,0 +1,33 @@
+$font1: 'Permanent Marker', cursive;
+$font2: 'Roboto Slab', serif;
+
+.character-info {
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    opacity: 0.8;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    .name {
+        font-size: 30px;
+        font-weight: 400;
+        width: 350px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: $font1;
+    }
+    
+    p {
+        font-family: $font2;
+        margin: 10px;
+    }
+    strong {
+        margin: 2px;
+    }
+}
