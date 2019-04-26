@@ -1,0 +1,45 @@
+$font1: 'Permanent Marker', cursive;
+$font2: 'Roboto Slab', serif;
+
+.character-info {
+    margin-top: 5rem;
+    padding-bottom: .5rem;
+    background-color: white;
+    opacity: 0.8;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 5px;
+    .character-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .name {
+            font-size: 30px;
+            font-weight: 400;
+            width: 350px;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+            font-family: $font1;
+        }
+        
+        p {
+            font-family: $font2;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        strong {
+            margin: 2px;
+        }
+    }
+
+    .filmlead {
+        font-family: $font1;
+        font-weight: 400;
+    }
+
+    .films {
+        font-family: $font2;
+    }
+}

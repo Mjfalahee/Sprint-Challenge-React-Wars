@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import Character from './components/Character';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      filmstate:[]
     };
   }
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacters('https://swapi.co/api/people/')
+    // this.getFilms('https://swapi.co/api/films')
   }
 
   getCharacters = URL => {
@@ -22,6 +25,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
+        //console.log(data);
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
@@ -29,11 +33,32 @@ class App extends Component {
       });
   };
 
+
+  // getFilms = URL => { 
+  //    fetch(URL)
+  //   .then(res => {
+  //      return res.json();
+  //    })
+  //    .then(data => {
+  //    let output = data.results;
+  //    this.setState({ filmstate: output});
+  //    console.log(this.state.filmstate);
+  //    })
+  //    .catch(err => {
+  //        throw new Error(err);
+  //        });
+  //    }
+
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-      </div>
+        <div className="characterlist">
+        {this.state.starwarsChars.map(character => 
+          <Character character={character} key={character.name}/>)}
+        </div>
+        </div>
     );
   }
 }
